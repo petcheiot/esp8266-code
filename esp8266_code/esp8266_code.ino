@@ -1,4 +1,5 @@
-#include "Connection.h"
+#include "SensorConnection.h"
+#include "ComponentConnection.h"
 
 const char *ssid = "INFINITUM9FAE";
 const char *password = "XkTntfe4Cz";
