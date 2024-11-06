@@ -8,7 +8,7 @@ template <typename LectureType>
 class SensorConnection {
 public:
   enum class SensorType : uint8_t {
-    Humidity = 1
+    Humidity = 1, Temperature = 2
   };
 
 public:

@@ -13,10 +13,10 @@ const char *waterPumpURL = "https://api.petche.shop/arduino/state/45";
 DHT dht(DHTPIN, DHTTYPE);
 
 // Temperature sensor connection that will send data every second and will send them in batches of three
-SensorConnection<float> temperatureSensor(temperatureURL, SensorConnection<float>::SensorType::Humidity, 1 * 1000, 3);
+SensorConnection<float> temperatureSensor(temperatureURL, SensorConnection<float>::SensorType::Temperature, 1 * 1000, 3);
 
 // Waterpump connection that will get data from the database every second
-ComponentConnection waterPump("https://api.petche.shop/arduino/state/45", ComponentConnection::ComponentType::WaterPump, 1 * 1000);
+ComponentConnection waterPump(waterPumpURL, ComponentConnection::ComponentType::WaterPump, 1 * 1000);
 
 void setup() {
   delay(10);
