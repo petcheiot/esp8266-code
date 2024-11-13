@@ -50,7 +50,7 @@ public:
 
     String jsonData = "";
     jsonData += "{\n";
-    jsonData += "\t\"microcontrollerId\": " + String("45") + ",\n";
+    jsonData += "\t\"microcontrollerId\": " + String(45) + ",\n";
     jsonData += "\t\"sensorType\": " + String(static_cast<uint8_t>(m_SensorType)) + ",\n";
     jsonData += "\t\"values\": [";
     for (size_t i = 0; i < m_Lectures.size(); ++i) {
@@ -70,8 +70,8 @@ public:
     } else if (responseCode < 200 || responseCode > 299) {
       Serial.println("ERROR - Se regresó un código de error de la petición");
     }
-    Serial.println("Envío éxitoso");
-    Serial.println(jsonData);
+    //Serial.println("Envío éxitoso");
+    //Serial.println(jsonData);
 
     httpConnection.end();
   }

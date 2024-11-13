@@ -45,7 +45,7 @@ private:
       Serial.println("ERROR - La petición GET obtuvo un código de respuesta negativo");
       return false;
     }
-    Serial.println("Lectura éxitosa");
+    //Serial.println("Lectura éxitosa");
 
     String res = httpConnection.getString();
     int startIndex = res.indexOf(KEY_TO_FIND) + KEY_TO_FIND.length() + 1;
